@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fórmula Animal | Farmácia de Manipulação Veterinária</title>
+  <meta
+    name="description"
+    content="Fórmula Animal Farmácia de Manipulação Veterinária em Cascavel - PR. Medicamentos manipulados, fórmulas personalizadas, atendimento via WhatsApp, retirada e entrega."
+  />
+
+  <style>
+    :root {
+      --roxo: #7a67b8;
+      --roxo-escuro: #5f4d99;
+      --roxo-claro: #efeafd;
+      --roxo-suave: #f7f3ff;
+      --rosa-claro: #f3edf9;
+      --texto: #2d2840;
+      --texto-claro: #6b6482;
+      --branco: #ffffff;
+      --borda: #e7def7;
+      --sombra: 0 12px 35px rgba(95, 77, 153, 0.12);
+      --gradiente: linear-gradient(135deg, #7a67b8 0%, #a58ee8 100%);
+      --verde-whats: #25d366;
+      --verde-whats-hover: #1ebe5d;
+      --max: 1180px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fcfbff;
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max), 92%);
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 86px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.3rem;
+      color: var(--roxo-escuro);
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--texto-claro);
+      max-width: 760px;
+      margin: 0 auto 42px;
+      font-size: 1.05rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 24px;
+      border-radius: 14px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--gradiente);
+      color: var(--branco);
+      box-shadow: var(--sombra);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      opacity: 0.96;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--roxo-escuro);
+      border: 2px solid var(--roxo);
+    }
+
+    .btn-outline:hover {
+      background: var(--roxo-suave);
+    }
+
+    .btn-whatsapp {
+      background: var(--verde-whats);
+      color: var(--branco);
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.22);
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--verde-whats-hover);
+      transform: translateY(-2px);
+    }
+
+    /* HEADER */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #f0eaff;
+    }
+
+    .header-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 84px;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand img {
+      width: 180px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav a {
+      color: var(--texto);
+      font-weight: 700;
+      font-size: 0.98rem;
+    }
+
+    .nav a:hover {
+      color: var(--roxo);
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.7rem;
+      background: none;
+      border: none;
+      color: var(--roxo-escuro);
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      background:
+        radial-gradient(circle at top left, #f2ecff 0%, transparent 34%),
+        linear-gradient(180deg, #fcfbff 0%, #f8f5ff 100%);
+      padding: 72px 0 54px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: var(--roxo-claro);
+      color: var(--roxo-escuro);
+      font-weight: 700;
+      margin-bottom: 22px;
+      font-size: 0.95rem;
+    }
+
+    .hero h1 {
+      font-size: 3.35rem;
+      line-height: 1.08;
+      color: var(--roxo-escuro);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.12rem;
+      color: var(--texto-claro);
+      max-width: 640px;
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .hero-infos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: var(--texto-claro);
+      font-size: 0.98rem;
+    }
+
+    .hero-infos span {
+      background: #fff;
+      border: 1px solid var(--borda);
+      border-radius: 999px;
+      padding: 8px 14px;
+    }
+
+    .hero-card {
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: 26px;
+      padding: 22px;
+      box-shadow: var(--sombra);
+    }
+
+    .hero-main-img {
+      border-radius: 18px;
+      overflow: hidden;
+      margin-bottom: 16px;
+      border: 1px solid var(--borda);
+    }
+
+    .hero-main-img img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+
+    .hero-mini-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .hero-mini-grid img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid var(--borda);
+    }
+
+    /* STATS */
+    .stats {
+      margin-top: -10px;
+      padding-bottom: 12px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .stat-card {
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: 20px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: var(--sombra);
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--roxo-escuro);
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      color: var(--texto-claro);
+      font-size: 0.98rem;
+    }
+
+    /* SERVICES */
+    .cards-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: var(--sombra);
+    }
+
+    .icon-badge {
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      background: var(--roxo-claro);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--roxo-escuro);
+      font-size: 1.5rem;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      color: var(--roxo-escuro);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: var(--texto-claro);
+    }
+
+    /* ABOUT */
+    .about {
+      background: linear-gradient(180deg, #fcfbff 0%, #f8f4ff 100%);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .about-content h2 {
+      font-size: 2.25rem;
+      color: var(--roxo-escuro);
+      margin-bottom: 18px;
+    }
+
+    .about-content p {
+      color: var(--texto-claro);
+      margin-bottom: 14px;
+      font-size: 1.04rem;
+    }
+
+    .check-list {
+      list-style: none;
+      margin: 24px 0 28px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .check-list li {
+      background: #fff;
+      border: 1px solid var(--borda);
+      border-radius: 14px;
+      padding: 14px 16px;
+      color: var(--texto);
+    }
+
+    .about-image-wrap {
+      display: grid;
+      gap: 16px;
+    }
+
+    .about-image-wrap img {
+      border-radius: 20px;
+      border: 1px solid var(--borda);
+      box-shadow: var(--sombra);
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .about-image-wrap .img-large {
+      height: 360px;
+    }
+
+    .about-image-wrap .img-small {
+      height: 220px;
+    }
+
+    /* CTA BANNER */
+    .cta-band {
+      padding: 10px 0 0;
+    }
+
+    .cta-band-box {
+      background: var(--gradiente);
+      border-radius: 28px;
+      color: #fff;
+      padding: 36px;
+      box-shadow: var(--sombra);
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .cta-band h2 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .cta-band p {
+      color: #f4efff;
+      font-size: 1.04rem;
+    }
+
+    .cta-band-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 14px;
+    }
+
+    .cta-band .btn-outline {
+      border-color: #fff;
+      color: #fff;
+    }
+
+    .cta-band .btn-outline:hover {
+      background: rgba(255,255,255,0.14);
+    }
+
+    /* GALLERY */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 18px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 290px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 1px solid var(--borda);
+      box-shadow: var(--sombra);
+    }
+
+    .gallery-grid img:first-child {
+      height: 100%;
+      min-height: 598px;
+    }
+
+    /* PROCESS */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .step {
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: var(--sombra);
+      position: relative;
+    }
+
+    .step-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--gradiente);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .step h3 {
+      color: var(--roxo-escuro);
+      margin-bottom: 8px;
+      font-size: 1.08rem;
+    }
+
+    .step p {
+      color: var(--texto-claro);
+      font-size: 0.97rem;
+    }
+
+    /* REVIEWS */
+    .reviews {
+      background: linear-gradient(180deg, #f8f5ff 0%, #fcfbff 100%);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .review-card {
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: var(--sombra);
+    }
+
+    .stars {
+      color: #f4b400;
+      font-size: 1.12rem;
+      margin-bottom: 14px;
+    }
+
+    .review-card p {
+      color: var(--texto-claro);
+      margin-bottom: 16px;
+    }
+
+    .review-card strong {
+      color: var(--roxo-escuro);
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .contact-card {
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: var(--sombra);
+    }
+
+    .contact-card h3 {
+      font-size: 1.4rem;
+      color: var(--roxo-escuro);
+      margin-bottom: 14px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .contact-item {
+      padding: 14px 16px;
+      background: var(--roxo-suave);
+      border-radius: 14px;
+      border: 1px solid var(--borda);
+      color: var(--texto);
+    }
+
+    .contact-item a {
+      color: var(--roxo-escuro);
+      font-weight: 700;
+    }
+
+    .contact-card iframe {
+      width: 100%;
+      min-height: 320px;
+      border: 0;
+      border-radius: 16px;
+    }
+
+    /* FINAL CTA */
+    .final-cta {
+      padding-top: 10px;
+    }
+
+    .final-cta-box {
+      background: #fff;
+      border: 1px solid var(--borda);
+      border-radius: 30px;
+      padding: 42px;
+      box-shadow: var(--sombra);
+      text-align: center;
+    }
+
+    .final-cta-box h2 {
+      font-size: 2.1rem;
+      color: var(--roxo-escuro);
+      margin-bottom: 12px;
+    }
+
+    .final-cta-box p {
+      max-width: 760px;
+      margin: 0 auto 24px;
+      color: var(--texto-claro);
+      font-size: 1.04rem;
+    }
+
+    .final-cta-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: #5a478f;
+      color: #eee9fb;
+      padding: 30px 0;
+      margin-top: 70px;
+    }
+
+    .footer-wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer p,
+    .footer a {
+      color: #eee9fb;
+    }
+
+    /* FLOAT WHATS */
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 1000;
+      background: var(--verde-whats);
+      color: #fff;
+      border-radius: 999px;
+      padding: 14px 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.35);
+    }
+
+    .whatsapp-float:hover {
+      background: var(--verde-whats-hover);
+    }
+
+    .whatsapp-icon {
+      width: 42px;
+      height: 42px;
+      background: rgba(255,255,255,0.16);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 1080px) {
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .stats-grid,
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cards-3,
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .gallery-grid img:first-child {
+        grid-column: 1 / -1;
+        min-height: 380px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .nav {
+        position: absolute;
+        top: 84px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-bottom: 1px solid var(--borda);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 4%;
+        display: none;
+      }
+
+      .nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
+      .cta-band-box {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-band-actions {
+        justify-content: flex-start;
+      }
+
+      .hero-main-img img {
+        height: 280px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .section {
+        padding: 70px 0;
+      }
+
+      .hero {
+        padding-top: 52px;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .section-title,
+      .about-content h2,
+      .final-cta-box h2,
+      .cta-band h2 {
+        font-size: 1.8rem;
+      }
+
+      .stats-grid,
+      .process-grid,
+      .gallery-grid,
+      .hero-mini-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid img:first-child {
+        min-height: 280px;
+      }
+
+      .brand img {
+        width: 155px;
+      }
+
+      .whatsapp-float span.text {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-wrap">
+      <a href="#inicio" class="brand">
+        <img src="logo-formula-animal.png" alt="Logo Fórmula Animal">
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        ☰
+      </button>
+
+      <nav class="nav" id="navMenu">
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#contato">Contato</a>
+        <a href="https://wa.me/5545999676227?text=Olá%2C%20quero%20mais%20informações%20sobre%20a%20Fórmula%20Animal." target="_blank" class="btn btn-whatsapp">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <span class="tag">Farmácia de Manipulação Veterinária em Cascavel - PR</span>
+          <h1>Cuidado veterinário personalizado com a identidade da sua marca</h1>
+          <p>
+            A Fórmula Animal oferece medicamentos manipulados, fórmulas personalizadas,
+            atendimento próximo e praticidade para o tutor. Um espaço preparado para
+            cuidar da saúde do pet com atenção, confiança e conveniência.
+          </p>
+
+          <div class="hero-buttons">
+            <a
+              href="https://wa.me/5545999676227?text=Olá%2C%20quero%20atendimento%20da%20Fórmula%20Animal."
+              target="_blank"
+              class="btn btn-whatsapp"
+            >
+              Falar no WhatsApp
+            </a>
+
+            <a href="#contato" class="btn btn-outline">Ver endereço</a>
+          </div>
+
+          <div class="hero-infos">
+            <span>⭐ 4,9 no Google</span>
+            <span>📍 Centro, Cascavel - PR</span>
+            <span>🚚 Entrega disponível</span>
+            <span>🏪 Retirada na loja</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-main-img">
+            <img src="fachada-formula-animal.png" alt="Fachada da Fórmula Animal">
+          </div>
+
+          <div class="hero-mini-grid">
+            <img src="interior-formula-animal.png" alt="Ambiente interno da Fórmula Animal">
+            <img src="ambiente-formula-animal.png" alt="Espaço interno da Fórmula Animal">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">4,9</div>
+            <div class="stat-label">avaliação dos clientes</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">159+</div>
+            <div class="stat-label">avaliações no Google</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">3</div>
+            <div class="stat-label">formas de atendimento</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">foco em conveniência e cuidado</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicos">
+      <div class="container">
+        <h2 class="section-title">Nossos serviços</h2>
+        <p class="section-subtitle">
+          Um site mais forte precisa mostrar claramente o que a empresa oferece.
+          Aqui estão os principais diferenciais da Fórmula Animal para destacar sua proposta.
+        </p>
+
+        <div class="cards-3">
+          <article class="card">
+            <div class="icon-badge">💊</div>
+            <h3>Medicamentos manipulados</h3>
+            <p>
+              Fórmulas desenvolvidas conforme a prescrição veterinária,
+              com atenção à dosagem, praticidade e necessidade individual do pet.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon-badge">🐾</div>
+            <h3>Atendimento personalizado</h3>
+            <p>
+              Atendimento humanizado para tutores e clínicas, ajudando em dúvidas,
+              orientação inicial e encaminhamento rápido pelo WhatsApp.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon-badge">🚚</div>
+            <h3>Loja, retirada e entrega</h3>
+            <p>
+              Mais conveniência para o cliente com opção de compra presencial,
+              retirada no local e entrega, facilitando o tratamento do animal.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="sobre">
+      <div class="container about-grid">
+        <div class="about-content">
+          <h2>Uma marca com presença, cuidado e identidade forte</h2>
+          <p>
+            A Fórmula Animal já possui uma identidade visual elegante e marcante em roxo,
+            com um ambiente diferenciado e uma fachada que passa confiança. O site precisa
+            refletir exatamente essa percepção.
+          </p>
+          <p>
+            Por isso, esta versão foi pensada para valorizar a marca, destacar o atendimento
+            e criar pontos de conversão claros em todo o site.
+          </p>
+
+          <ul class="check-list">
+            <li>✔ Botões de atendimento por WhatsApp em pontos estratégicos</li>
+            <li>✔ Visual alinhado com a identidade roxa da empresa</li>
+            <li>✔ Uso das imagens reais da loja e do ambiente</li>
+            <li>✔ Estrutura pronta para apresentação profissional no GitHub Pages</li>
+          </ul>
+
+          <a
+            href="https://wa.me/5545999676227?text=Olá%2C%20quero%20conhecer%20os%20serviços%20da%20Fórmula%20Animal."
+            target="_blank"
+            class="btn btn-primary"
+          >
+            Solicitar atendimento
+          </a>
+        </div>
+
+        <div class="about-image-wrap">
+          <img class="img-large" src="interior-formula-animal.png" alt="Interior da Fórmula Animal">
+          <img class="img-small" src="fachada-formula-animal.png" alt="Fachada da Fórmula Animal">
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-band">
+      <div class="container">
+        <div class="cta-band-box">
+          <div>
+            <h2>Precisa falar com a equipe agora?</h2>
+            <p>
+              Tire dúvidas, solicite informações ou inicie seu atendimento com rapidez pelo WhatsApp.
+            </p>
+          </div>
+
+          <div class="cta-band-actions">
+            <a
+              href="https://wa.me/5545999676227?text=Olá%2C%20quero%20atendimento%20rápido."
+              target="_blank"
+              class="btn btn-whatsapp"
+            >
+              Atendimento via WhatsApp
+            </a>
+            <a href="#contato" class="btn btn-outline">Ver contato</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="galeria">
+      <div class="container">
+        <h2 class="section-title">Galeria da empresa</h2>
+        <p class="section-subtitle">
+          As imagens reais ajudam muito a passar credibilidade. Aqui o site valoriza
+          a fachada, o ambiente e a identidade visual da Fórmula Animal.
+        </p>
+
+        <div class="gallery-grid">
+          <img src="fachada-formula-animal.png" alt="Fachada da loja Fórmula Animal">
+          <img src="interior-formula-animal.png" alt="Interior da loja Fórmula Animal">
+          <img src="ambiente-formula-animal.png" alt="Ambiente da Fórmula Animal">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="como-funciona">
+      <div class="container">
+        <h2 class="section-title">Como funciona o atendimento</h2>
+        <p class="section-subtitle">
+          Uma seção importante para transformar visitantes em contatos reais.
+        </p>
+
+        <div class="process-grid">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Entre em contato</h3>
+            <p>
+              O tutor fala com a equipe pelo WhatsApp ou visita a unidade em Cascavel.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Envie a necessidade</h3>
+            <p>
+              A equipe recebe a solicitação e orienta sobre o atendimento da forma mais rápida.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Escolha a melhor forma</h3>
+            <p>
+              O cliente pode optar por compra na loja, retirada ou entrega.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Atendimento com praticidade</h3>
+            <p>
+              Tudo pensado para facilitar o cuidado com o pet e tornar a experiência mais simples.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reviews" id="avaliacoes">
+      <div class="container">
+        <h2 class="section-title">Avaliações e percepção de confiança</h2>
+        <p class="section-subtitle">
+          A marca já tem uma ótima reputação. No site, isso precisa aparecer com destaque.
+        </p>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              Excelente atendimento, ambiente bonito e marca muito bem apresentada.
+              Passa profissionalismo e confiança.
+            </p>
+            <strong>Cliente satisfeito</strong>
+          </div>
+
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              A empresa já transmite cuidado visualmente. O contato é rápido e a experiência é muito boa.
+            </p>
+            <strong>Avaliação positiva</strong>
+          </div>
+
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              Ótima presença, atendimento atencioso e estrutura que passa credibilidade.
+            </p>
+            <strong>Google Maps</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="container">
+        <h2 class="section-title">Contato e localização</h2>
+        <p class="section-subtitle">
+          Facilite o acesso ao atendimento com endereço, telefone, site e botão direto para conversa.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Fale com a Fórmula Animal</h3>
+            <p>
+              Atendimento rápido para quem deseja tirar dúvidas, pedir informações ou iniciar contato com a unidade.
+            </p>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <strong>Endereço:</strong><br>
+                R. Erechim, 1612 - Centro, Cascavel - PR, 85812-260
+              </div>
+
+              <div class="contact-item">
+                <strong>Telefone / WhatsApp:</strong><br>
+                <a href="tel:+5545999676227">(45) 99967-6227</a>
+              </div>
+
+              <div class="contact-item">
+                <strong>Site oficial:</strong><br>
+                <a href="https://formulanimal.com.br" target="_blank">formulanimal.com.br</a>
+              </div>
+
+              <div class="contact-item">
+                <strong>Atendimento:</strong><br>
+                Aberto · Fecha às 18:00
+              </div>
+            </div>
+
+            <div style="margin-top: 22px; display: flex; gap: 12px; flex-wrap: wrap;">
+              <a
+                href="https://wa.me/5545999676227?text=Olá%2C%20quero%20falar%20com%20a%20Fórmula%20Animal."
+                target="_blank"
+                class="btn btn-whatsapp"
+              >
+                Chamar no WhatsApp
+              </a>
+
+              <a
+                href="https://maps.google.com/?q=R.%20Erechim,%201612%20-%20Centro,%20Cascavel%20-%20PR"
+                target="_blank"
+                class="btn btn-outline"
+              >
+                Ver rota
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <h3>Localização</h3>
+            <iframe
+              src="https://www.google.com/maps?q=R.%20Erechim,%201612%20-%20Centro,%20Cascavel%20-%20PR&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa da Fórmula Animal"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <div class="container">
+        <div class="final-cta-box">
+          <h2>Seu próximo atendimento começa com um clique</h2>
+          <p>
+            Esta estrutura já está pronta para funcionar como um site de apresentação profissional,
+            com foco em confiança, marca forte e conversão por WhatsApp.
+          </p>
+
+          <div class="final-cta-actions">
+            <a
+              href="https://wa.me/5545999676227?text=Olá%2C%20quero%20atendimento%20da%20Fórmula%20Animal."
+              target="_blank"
+              class="btn btn-whatsapp"
+            >
+              Atendimento imediato
+            </a>
+
+            <a href="#galeria" class="btn btn-primary">Ver a empresa</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <p>© 2025 Fórmula Animal - Farmácia de Manipulação Veterinária</p>
+      <p>Cascavel - PR • WhatsApp: <a href="tel:+5545999676227">(45) 99967-6227</a></p>
+    </div>
+  </footer>
+
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/5545999676227?text=Olá%2C%20vim%20pelo%20site%20e%20quero%20atendimento."
+    target="_blank"
+    aria-label="Falar no WhatsApp"
+  >
+    <span class="whatsapp-icon">✆</span>
+    <span class="text">WhatsApp</span>
+  </a>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
